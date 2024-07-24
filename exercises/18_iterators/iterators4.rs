@@ -10,6 +10,14 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    fn do_factorial(acc: u64, num: u64) -> u64 {
+        if num == 0 || num == 1 {
+            acc
+        } else {
+            do_factorial(acc * num, num - 1)
+        }
+    }
+    do_factorial(1, num)
 }
 
 fn main() {
